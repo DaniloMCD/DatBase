@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js" defer></script>
+    <title>Document</title>
+</head>
+<body class="bg-red-100 p-5">
+    <div class="container ">
+        <h1 class="text-x-3 mb-4 font-blond">CRUD CON AXIOS</h1>
+    <form id="crudForm" class="bg-white p-6 rounded">
+        <div class="mb-4">
+            <label class="block text-gray-700" for="name">Nombre</label>
+            <input class="border border-gray-300 p-2 rounded w-full" type="text"id="name">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700" for="lasName">Last Name</label>
+            <input class="border border-gray-300 p-2 rounded w-full" type="text"id="lastName">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700" for="phone">Phone</label>
+            <input class="border border-gray-300 p-2 rounded w-full" type="text"id="phone">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700" for="img">Imagen</label>
+            <input class="border border-gray-300 p-2 rounded w-full" type="text"id="img">
+        </div>
+
+        <button class="bg-blue-500 text-white px-4 p-2 rounded" type="submit">Guardar</button>
+    </form>
+    <table class="min-w-full bg-white shadow-md rounded">
+        <thead>
+            <tr>
+                <th class="py-2 px-4 bg-gray-200">Nombre</th>
+                <th class="py-2 px-4 bg-gray-200">Apellido</th>
+                <th class="py-2 px-4 bg-gray-200">Telefono</th>
+                <th class="py-2 px-4 bg-gray-200">Imagen</th>
+            </tr>
+        </thead>
+        <tbody id="dataTable">
+            <!--los datos que iran aquí-->
+        </tbody>
+    </table>
+
+    </div>
+</body>
+</html>
